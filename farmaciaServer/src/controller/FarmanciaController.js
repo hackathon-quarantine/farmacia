@@ -18,6 +18,12 @@ class FarmarciaController {
       return response.json(await FarmanciaDao._findAll())
     }
 
+    
+  async findbyMedicamento(request, response) {
+    const { nome } = request.body;
+    return response.json(await FarmanciaDao._findAllByMedicamento(nome))
+  }
+
 }
 
 module.exports = new FarmarciaController()

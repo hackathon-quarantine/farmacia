@@ -12,6 +12,8 @@ routes.get('/user', userController.find)
 
 routes.get('/farmancia', farmanciaController.find)
 
+routes.get('/farmanciaMedicamento', farmanciaController.findbyMedicamento)
+
 routes.post('/farmancia', farmanciaController.create)
 
 module.exports = routes;
